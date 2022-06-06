@@ -1,0 +1,347 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title "IoTGW"
+Date "2021-01-26"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 8750 4250 0    50   BiDi ~ 0
+GND
+Text GLabel 8750 3550 0    50   BiDi ~ 0
++3.3V
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F7C0641
+P 8950 3250
+AR Path="/5F7C0641" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CDF61/5F7C0641" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CE246/5F7C0641" Ref="#PWR035"  Part="1" 
+F 0 "#PWR035" H 8950 3100 50  0001 C CNN
+F 1 "+3.3V" H 8950 3400 50  0000 C CNN
+F 2 "" H 8950 3250 50  0000 C CNN
+F 3 "" H 8950 3250 50  0000 C CNN
+	1    8950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F7C0647
+P 8950 4450
+AR Path="/5F7C0647" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CDF61/5F7C0647" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CE246/5F7C0647" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 8950 4200 50  0001 C CNN
+F 1 "GND" H 8950 4300 50  0000 C CNN
+F 2 "" H 8950 4450 50  0000 C CNN
+F 3 "" H 8950 4450 50  0000 C CNN
+	1    8950 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4250 8950 4250
+Wire Wire Line
+	8950 4250 8950 4450
+$Comp
+L Device:D_TVS_x2_AAC D4
+U 1 1 5F79F44F
+P 6050 4250
+F 0 "D4" H 6200 4150 50  0000 C CNN
+F 1 "PESD2CAN" H 6350 4050 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5900 4250 50  0001 C CNN
+F 3 "~" H 5900 4250 50  0001 C CNN
+	1    6050 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 5F7A034F
+P 3550 3150
+F 0 "C10" H 3665 3196 50  0000 L CNN
+F 1 "100nF" H 3665 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3588 3000 50  0001 C CNN
+F 3 "~" H 3550 3150 50  0001 C CNN
+	1    3550 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F7BD5C5
+P 2750 4450
+AR Path="/5F7BD5C5" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CDF61/5F7BD5C5" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CE246/5F7BD5C5" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 2750 4200 50  0001 C CNN
+F 1 "GND" H 2750 4300 50  0000 C CNN
+F 2 "" H 2750 4450 50  0000 C CNN
+F 3 "" H 2750 4450 50  0000 C CNN
+	1    2750 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F7BFCB5
+P 3550 3400
+AR Path="/5F7BFCB5" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CDF61/5F7BFCB5" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CE246/5F7BFCB5" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 3550 3150 50  0001 C CNN
+F 1 "GND" H 3550 3250 50  0000 C CNN
+F 2 "" H 3550 3400 50  0000 C CNN
+F 3 "" H 3550 3400 50  0000 C CNN
+	1    3550 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2800 2750 2900
+Wire Wire Line
+	3550 3000 3550 2900
+Wire Wire Line
+	3550 2900 2750 2900
+Wire Wire Line
+	3550 3300 3550 3400
+$Comp
+L power:GND #PWR?
+U 1 1 5F7CA4AE
+P 3950 4650
+AR Path="/5F7CA4AE" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CDF61/5F7CA4AE" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CE246/5F7CA4AE" Ref="#PWR033"  Part="1" 
+F 0 "#PWR033" H 3950 4400 50  0001 C CNN
+F 1 "GND" H 3950 4500 50  0000 C CNN
+F 2 "" H 3950 4650 50  0000 C CNN
+F 3 "" H 3950 4650 50  0000 C CNN
+	1    3950 4650
+	1    0    0    -1  
+$EndComp
+Text GLabel 2000 3700 0    50   Input ~ 0
+CAN_TX
+Text GLabel 2000 3800 0    50   Output ~ 0
+CAN_RX
+$Comp
+L Device:R R10
+U 1 1 5F79FA1F
+P 5050 3900
+F 0 "R10" H 5120 3946 50  0000 L CNN
+F 1 "120R" H 5120 3855 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4980 3900 50  0001 C CNN
+F 3 "~" H 5050 3900 50  0001 C CNN
+	1    5050 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 3250 8950 3550
+Wire Wire Line
+	8950 3550 8750 3550
+$Comp
+L Device:C C11
+U 1 1 5F78C41F
+P 3700 4300
+F 0 "C11" H 3815 4346 50  0000 L CNN
+F 1 "47pF" H 3815 4255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3738 4150 50  0001 C CNN
+F 3 "~" H 3700 4300 50  0001 C CNN
+	1    3700 4300
+	1    0    0    -1  
+$EndComp
+Connection ~ 2750 2900
+Wire Wire Line
+	5700 4250 5650 4250
+Wire Wire Line
+	6400 4250 6450 4250
+$Comp
+L power:GND #PWR?
+U 1 1 5F920E6B
+P 6050 4550
+AR Path="/5F920E6B" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CDF61/5F920E6B" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CE246/5F920E6B" Ref="#PWR034"  Part="1" 
+F 0 "#PWR034" H 6050 4300 50  0001 C CNN
+F 1 "GND" H 6050 4400 50  0000 C CNN
+F 2 "" H 6050 4550 50  0000 C CNN
+F 3 "" H 6050 4550 50  0000 C CNN
+	1    6050 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4400 6050 4550
+Wire Wire Line
+	5050 3750 5050 3650
+Wire Wire Line
+	5050 3650 4700 3650
+Wire Wire Line
+	4700 3650 4700 3850
+Wire Wire Line
+	4700 3950 4700 4150
+Wire Wire Line
+	4700 4150 5050 4150
+Wire Wire Line
+	5050 4150 5050 4050
+Wire Wire Line
+	5050 3650 5400 3650
+Wire Wire Line
+	5400 3650 5400 3850
+Connection ~ 5050 3650
+Wire Wire Line
+	5050 4150 5400 4150
+Wire Wire Line
+	5400 4150 5400 3950
+Connection ~ 5050 4150
+$Comp
+L Device:C C12
+U 1 1 5F9356D5
+P 4150 4300
+F 0 "C12" H 4265 4346 50  0000 L CNN
+F 1 "47pF" H 4265 4255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4188 4150 50  0001 C CNN
+F 3 "~" H 4150 4300 50  0001 C CNN
+	1    4150 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4150 3700 3850
+Connection ~ 3700 3850
+Wire Wire Line
+	3700 3850 4700 3850
+Wire Wire Line
+	4150 4150 4150 3950
+Connection ~ 4150 3950
+Wire Wire Line
+	4150 3950 4700 3950
+Wire Wire Line
+	3700 4450 3700 4550
+Wire Wire Line
+	3700 4550 3950 4550
+Wire Wire Line
+	4150 4550 4150 4450
+Wire Wire Line
+	3950 4650 3950 4550
+Connection ~ 3950 4550
+Wire Wire Line
+	3950 4550 4150 4550
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F81BFD6
+P 2750 2800
+AR Path="/5F81BFD6" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CDF61/5F81BFD6" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CE246/5F81BFD6" Ref="#PWR030"  Part="1" 
+F 0 "#PWR030" H 2750 2650 50  0001 C CNN
+F 1 "+3.3V" H 2750 2950 50  0000 C CNN
+F 2 "" H 2750 2800 50  0000 C CNN
+F 3 "" H 2750 2800 50  0000 C CNN
+	1    2750 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_CAN_LIN:TCAN334 U4
+U 1 1 5F88D6DB
+P 2750 3900
+F 0 "U4" H 2900 4400 50  0000 C CNN
+F 1 "TCAN334" H 3000 4300 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2750 3400 50  0001 C CIN
+F 3 "" H 2750 3900 50  0001 C CNN
+	1    2750 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3800 3400 3800
+Wire Wire Line
+	3400 3800 3400 3850
+Wire Wire Line
+	3400 3850 3700 3850
+Wire Wire Line
+	3400 3950 3400 4000
+Wire Wire Line
+	3400 4000 3250 4000
+Wire Wire Line
+	3400 3950 4150 3950
+Wire Wire Line
+	2000 3700 2250 3700
+Wire Wire Line
+	2250 3800 2000 3800
+Wire Wire Line
+	2750 4300 2750 4450
+Wire Wire Line
+	2750 2900 2750 3500
+$Comp
+L Device:R R8
+U 1 1 5F8A78AE
+P 1650 4350
+F 0 "R8" H 1720 4396 50  0000 L CNN
+F 1 "4K7" H 1720 4305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1580 4350 50  0001 C CNN
+F 3 "~" H 1650 4350 50  0001 C CNN
+	1    1650 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8A9070
+P 1800 4700
+AR Path="/5F8A9070" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CDF61/5F8A9070" Ref="#PWR?"  Part="1" 
+AR Path="/5F8CE246/5F8A9070" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 1800 4450 50  0001 C CNN
+F 1 "GND" H 1800 4550 50  0000 C CNN
+F 2 "" H 1800 4700 50  0000 C CNN
+F 3 "" H 1800 4700 50  0000 C CNN
+	1    1800 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 4000 1650 4000
+Wire Wire Line
+	1650 4000 1650 4200
+Wire Wire Line
+	2250 4100 1950 4100
+Wire Wire Line
+	1950 4100 1950 4200
+Wire Wire Line
+	1650 4500 1650 4600
+Wire Wire Line
+	1650 4600 1800 4600
+Wire Wire Line
+	1950 4600 1950 4500
+Wire Wire Line
+	1800 4700 1800 4600
+Connection ~ 1800 4600
+Wire Wire Line
+	1800 4600 1950 4600
+$Comp
+L Device:R R9
+U 1 1 5F8A8AC4
+P 1950 4350
+F 0 "R9" H 2020 4396 50  0000 L CNN
+F 1 "4K7" H 2020 4305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1880 4350 50  0001 C CNN
+F 3 "~" H 1950 4350 50  0001 C CNN
+	1    1950 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3850 6450 3850
+Wire Wire Line
+	5400 3950 5650 3950
+Wire Wire Line
+	6450 4250 6450 3850
+Connection ~ 6450 3850
+Wire Wire Line
+	5650 4250 5650 3950
+Connection ~ 5650 3950
+Text GLabel 6950 3850 2    50   BiDi ~ 0
+CAN_H
+Text GLabel 6950 3950 2    50   BiDi ~ 0
+CAN_L
+Wire Wire Line
+	6450 3850 6950 3850
+Wire Wire Line
+	5650 3950 6950 3950
+$EndSCHEMATC
